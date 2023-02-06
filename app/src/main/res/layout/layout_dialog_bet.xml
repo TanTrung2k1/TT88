@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/bg_white_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/bg_dialog_top"
+        android:text="Nhập sự lựa chọn của bạn"
+        android:gravity="center"
+        style="@style/TextAppearance.AppCompat.Title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="123dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/green_car" />
+
+            <CheckBox
+                android:id="@+id/firstCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="123dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/yellow_car" />
+
+            <CheckBox
+                android:id="@+id/secondCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="123dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/blue_car" />
+
+            <CheckBox
+                android:id="@+id/thirdCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/betAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số tiền cược"
+        android:inputType="numberDecimal"
+        android:padding="20dp"
+        android:layout_margin="30dp" />
+
+    <Button
+        android:id="@+id/btn_confirm_bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:layout_gravity="center"
+        android:backgroundTint="#20191616" />
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_white_dialog"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="@drawable/bg_dialog_top"
+        android:text="Kết quả"
+        style="@style/TextAppearance.AppCompat.Title" />
+
+
+    <TextView
+        android:id="@+id/carWin"
+        android:padding="15dp"
+        android:text="Car win"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:padding="15dp"
+        android:text="Message" />
+
+    <Button
+        android:id="@+id/confirm_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:backgroundTint="#20191616"
+        android:layout_gravity="center" />
+
+</LinearLayout>

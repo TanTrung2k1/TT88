@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#22DDC9C9"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/lo_go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <Button
+        android:id="@+id/btn_click_bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#20191616"
+        android:text="Đặt cược"
+        app:layout_constraintBottom_toBottomOf="@+id/imageLogo"
+        app:layout_constraintEnd_toStartOf="@+id/imageLogo" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Số dư : "
+        app:layout_constraintEnd_toStartOf="@+id/tvSodu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvSodu" />
+
+    <TextView
+        android:id="@+id/tvSodu"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="Số tiền"
+        app:layout_constraintBottom_toTopOf="@+id/tvTienCuoc"
+        app:layout_constraintEnd_toStartOf="@+id/imageLogo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Số tiền cược : "
+        app:layout_constraintBottom_toBottomOf="@+id/tvTienCuoc"
+        app:layout_constraintEnd_toStartOf="@+id/tvTienCuoc"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tvTienCuoc"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="100dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="left"
+        android:text="Số tiền cược"
+        app:layout_constraintBottom_toTopOf="@+id/btn_click_bet"
+        app:layout_constraintEnd_toStartOf="@+id/imageLogo" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Xe cược : "
+        app:layout_constraintEnd_toStartOf="@+id/tvBet_Car"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tvBet_Car"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvTienCuoc"
+        app:layout_constraintTop_toBottomOf="@+id/tvTienCuoc" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/b_g"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo">
+
+
+        <SeekBar
+            android:id="@+id/sbFCar"
+            android:layout_width="358dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/green_car"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/sbSCar"
+            android:layout_width="358dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="13dp"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/yellow_car"
+            app:layout_constraintStart_toStartOf="@+id/sbFCar"
+            app:layout_constraintTop_toBottomOf="@+id/sbFCar" />
+
+        <SeekBar
+            android:id="@+id/sbTCar"
+            android:layout_width="358dp"
+            android:layout_height="48dp"
+
+            android:layout_marginTop="13dp"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/blue_car"
+            app:layout_constraintStart_toStartOf="@+id/sbSCar"
+            app:layout_constraintTop_toBottomOf="@+id/sbSCar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#20191616"
+        android:text="Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"></Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
